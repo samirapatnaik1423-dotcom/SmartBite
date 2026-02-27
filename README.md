@@ -90,3 +90,8 @@ python app.py
 
 Open in browser
 http://127.0.0.1:5000
+
+## Developed By
+Behera Samira Patnaik
+BTech 3rd Year Student
+Full-Stack Mini Project
