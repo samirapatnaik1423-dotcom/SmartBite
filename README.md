@@ -1,5 +1,4 @@
 # SmartBite
-SmartBite is a full-stack food ordering web application built using Flask and SQLite, featuring user authentication, session-based cart management, Indian menu items with images, order processing, and order history tracking.
 SmartBite – Food Ordering & Cart Management System
 
 SmartBite is a full-stack food ordering web application built using Python, Flask, HTML, CSS, and SQLite. It allows users to sign up, log in, browse Indian food items, add them to a cart, place orders, and view order history.
@@ -17,14 +16,14 @@ Menu System,
 ### Categories:
 Breakfast, Main Course, Starters, Breads, Desserts, Beverages
 
-Food images for each item
-Clean styled menu display
-Cart System
-Add to Cart (POST method)
-Quantity management
-Subtotal & Total price calculation
-Session-based cart storage
-Order Processing
+Food images for each item,
+Clean styled menu display,
+Cart System,
+Add to Cart (POST method),
+Quantity management,
+Subtotal & Total price calculation,
+Session-based cart storage,
+Order Processing,
 Confirm Order
 
 ## Stores:
@@ -39,7 +38,7 @@ Users can view previous orders,
 Displays order details and total amount
 
 ### Tech Stack:
-Frontend:
+#### Frontend:
 HTML5,
 CSS3
 
@@ -50,22 +49,22 @@ SQLite,
 Sessions,
 GET & POST methods
 
-#### Project Structure
-SmartBite/
-app.py
-database.db
-templates/
-login.html
-signup.html
-menu.html
-cart.html
-success.html
-static/
-style.css
-images/
+#### Project Structure:
+SmartBite/ <br>
+app.py <br>
+database.db <br>
+templates/ <br>
+login.html <br>
+signup.html <br>
+menu.html <br>
+cart.html <br>
+success.html <br>
+static/ <br>
+style.css <br>
+images/ <br>
 
 #### Database Schema:
-users
+users  
 id (Primary Key)
 username (Unique)
 password
@@ -82,16 +81,16 @@ items
 total
 datetime
 
-### How to Run
+### How to Run:
 Install Flask
 pip install flask
-**Run the app**
+**Run the app:**
 python app.py
 
-Open in browser
+**Open in browser:**
 http://127.0.0.1:5000
 
-## Developed By
+## Developed By:
 Behera Samira Patnaik <br>
 BTech 3rd Year Student <br>
 Full-Stack Mini Project
