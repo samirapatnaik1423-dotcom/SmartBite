@@ -13,7 +13,10 @@ Logout functionality
 Duplicate username prevention
 Menu System
 30+ Indian Veg & Non-Veg food items
-**Categories: **Breakfast, Main Course, Starters, Breads, Desserts, Beverages
+
+Categories:
+Breakfast, Main Course, Starters, Breads, Desserts, Beverages
+
 Food images for each item
 Clean styled menu display
 Cart System
@@ -23,7 +26,8 @@ Subtotal & Total price calculation
 Session-based cart storage
 Order Processing
 Confirm Order
-**Stores:**
+
+Stores:
 Username
 Ordered Items
 Total Amount
@@ -33,18 +37,21 @@ Order success page
 Order History
 Users can view previous orders
 Displays order details and total amount
-**Tech Stack**
-**Frontend:**
+
+Tech Stack:
+Frontend:
 HTML5
 CSS3
-**Backend:
-**Python
+
+Backend:
+Python
 Flask
 SQLite
 Sessions
 GET & POST methods
-**Project Structure
-**SmartBite/
+
+Project Structure
+SmartBite/
 app.py
 database.db
 templates/
@@ -56,7 +63,8 @@ success.html
 static/
 style.css
 images/
-**Database Schema**
+
+Database Schema:
 users
 id (Primary Key)
 username (Unique)
@@ -73,6 +81,7 @@ username
 items
 total
 datetime
+
 **How to Run**
 Install Flask
 pip install flask
