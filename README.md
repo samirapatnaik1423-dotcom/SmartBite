@@ -4,7 +4,7 @@ SmartBite – Food Ordering & Cart Management System
 
 SmartBite is a full-stack food ordering web application built using Python, Flask, HTML, CSS, and SQLite. It allows users to sign up, log in, browse Indian food items, add them to a cart, place orders, and view order history.
 
-###Features:
+**###Features:**
 Authentication
 User Signup (Username & Password)
 User Login
