@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBite - Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="fade-in">
+
+<nav>
+    <div class="logo">SmartBite</div>
+</nav>
+
+<div class="success-box">
+    <h2>🎉 Order Placed Successfully</h2>
+    <p>Total Amount Paid: ₹ {{ total }}</p>
+    <a href="/menu"><button>Order Again</button></a>
+</div>
+
+</body>
+</html>

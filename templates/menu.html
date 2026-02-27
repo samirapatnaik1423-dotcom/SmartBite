@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBite - Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="fade-in">
+
+<nav>
+    <div class="logo">SmartBite🍽️</div>
+    <div>
+        <a href="/menu">Menu</a>
+        <a href="/cart">Cart</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<h2 class="title">Explore Our Delicious Menu 😋</h2>
+
+<!-- 🔍 SEARCH + FILTER SECTION -->
+<div class="search-filter-container">
+    <form method="GET" action="{{ url_for('menu') }}" class="search-form">
+
+        <input type="text" 
+               name="search" 
+               placeholder="🔍 Search your favorite food..."
+               value="{{ request.args.get('search','') }}">
+
+        <select name="category">
+            <option value="">All Categories</option>
+            <option value="Breakfast"
+                {% if request.args.get('category') == 'Breakfast' %}selected{% endif %}>
+                Breakfast
+            </option>
+            <option value="Main Course"
+                {% if request.args.get('category') == 'Main Course' %}selected{% endif %}>
+                Main Course
+            </option>
+            <option value="Beverages"
+                {% if request.args.get('category') == 'Beverages' %}selected{% endif %}>
+                Beverages
+            </option>
+            <option value="Desserts"
+                {% if request.args.get('category') == 'Desserts' %}selected{% endif %}>
+                Desserts
+            </option>
+        </select>
+
+        <button type="submit">Apply</button>
+    </form>
+</div>
+
+<!-- 🍛 MENU ITEMS -->
+<div class="menu-container">
+    {% for item in items %}
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/' + item[4]) }}">
+        <h3>{{ item[1] }}</h3>
+        <p class="category">{{ item[2] }}</p>
+        <p class="price">₹ {{ item[3] }}</p>
+
+        <form method="POST" action="/add_to_cart/{{ item[0] }}">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

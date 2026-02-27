@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBite - Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="fade-in">
+
+<nav>
+    <div class="logo">SmartBite</div>
+    <div>
+        <a href="/menu">Menu</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+
+<h2>Your Cart</h2>
+
+{% if cart %}
+<table>
+<tr>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price (₹)</th>
+    <th>Subtotal (₹)</th>
+</tr>
+
+{% for item in cart.values() %}
+<tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>₹ {{ item.price }}</td>
+    <td>₹ {{ item.price * item.quantity }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<h3>Total: ₹ {{ total }}</h3>
+
+<form method="POST" action="/confirm">
+    <button type="submit">Confirm Order</button>
+</form>
+
+{% else %}
+<p>Cart is empty.</p>
+{% endif %}
+
+</body>
+</html>

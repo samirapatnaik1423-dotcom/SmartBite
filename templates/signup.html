@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBite - Signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="login-bg fade-in">
+
+<div class="overlay"></div>
+
+<div class="login-card slide-in">
+    <h1 class="brand">SmartBite</h1>
+    <h3>Create Account</h3>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="/">Login</a></p>
+</div>
+
+</body>
+</html>
